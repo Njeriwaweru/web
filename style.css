@@ -1,0 +1,360 @@
+@font-face {
+  font-family: "Gt";
+  src: url("assets/fonts/GTWalsheimPro-Regular.woff2");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Gt";
+}
+
+body {
+  background-image: url("assets/images/med9.png");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+}
+
+.button {
+  color: #fff;
+  background: #000;
+  padding: 14px 25px;
+  font-size: 14px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: 0.1s ease;
+  border-radius: 7px;
+}
+
+.button:hover {
+  background-color: blue;
+  color: white;
+}
+
+.button:active {
+  background-color: rgb(74, 74, 255);
+  transform: translateY(1px);
+}
+
+nav {
+  background: #fff;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+}
+
+nav ul li a {
+  background: rgb(230, 230, 255);
+  color: #000;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 7px;
+}
+
+nav ul li a.active {
+  background: rgb(48, 48, 255);
+  color: #fff;
+}
+
+.loggedUser {
+  right: 25px;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+.loggedUser::after {
+  content: "Click to log out";
+  position: absolute;
+  opacity: 0;
+  cursor: default;
+  right: 110%;
+  width: max-content;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 12px;
+  background: rgba(51, 51, 51, 0.555);
+  color: #fff;
+  padding: 10px;
+  transition: 0.1s ease;
+}
+
+.loggedUser input:hover {
+  background: rgb(48, 48, 255);
+  color: #fff;
+}
+
+.loggedUser:hover::after {
+  opacity: 1;
+}
+
+/* ORDERING PAGE */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+h1 {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 60%;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+input {
+  padding: 15px;
+  border-radius: 7px;
+  border: 1px solid #000;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* PATIENTS PAGE */
+#patients_container {
+  width: 100%;
+}
+
+.search_patient,
+.patient_details {
+  padding: 0 40px;
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search_patient input {
+  width: 85%;
+  font-size: 14px;
+  padding: 14px;
+}
+
+.patient_details table {
+  width: 100%;
+  border: none;
+}
+
+.patient_details table tr {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.patient_details table th {
+  border: none;
+}
+
+.patient_details table td {
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  border-right: none;
+  width: 100%;
+  padding: 14px;
+}
+
+.patient_details table td:last-child {
+  border-right: 1px solid #000;
+}
+
+.patient_details table td.th {
+  background: rgb(3, 7, 255);
+  color: #fff;
+  border-bottom: none;
+}
+
+.id {
+  background: rgb(240, 206, 161);
+  padding: 3px 20px;
+  font-size: 13px;
+  max-width: max-content;
+  border-radius: 10px;
+}
+
+.inpat {
+  background: rgb(170, 255, 170);
+  color: rgb(0, 105, 0);
+  padding: 3px 20px;
+  max-width: max-content;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.outpat {
+  background: rgb(255, 159, 159);
+  color: rgb(219, 4, 4);
+  padding: 3px 20px;
+  max-width: max-content;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* ADD PATIENTS */
+#add_patients {
+  width: 100%;
+}
+
+#add_patients form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.nameInputs {
+  display: flex;
+  width: 60%;
+  gap: 15px;
+  margin: auto;
+}
+
+.addInput {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+select {
+  padding: 14px;
+  border: 1px solid #000;
+  border-radius: 7px;
+}
+
+select:focus {
+  outline: none;
+}
+
+.button-div {
+  width: 60%;
+  margin: auto;
+}
+
+#add_patients form button {
+  width: 100%;
+  margin-bottom: 120px;
+  align-self: flex-end;
+}
+
+/* PRESCRIPTION PAGE */
+
+.namesInputs {
+  display: flex;
+  gap: 15px;
+}
+
+.prescInput {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+  border: 1px solid #000;
+  border-radius: 7px;
+  padding: 14px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+/* HOME PAGE */
+
+.error {
+  color: rgb(196, 0, 0);
+  border-top: 1px solid rgb(196, 0, 0);
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  background: rgb(253, 159, 159);
+}
+
+.success {
+  color: rgb(1, 112, 1);
+  border-top: 1px solid rgb(1, 112, 1);
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  background: rgb(182, 255, 182);
+}
+.logInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+/* MEDICINE PAGE */
+#medicine_container {
+  width: 100%;
+  padding: 0 40px;
+}
+
+.search_medicine {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.search_medicine input {
+  width: 58%;
+  margin: auto;
+  padding: 14px;
+  font-size: 14px;
+}
+
+/* REGISTER PAGE */
+
+#register_container {
+  width: 100%;
+}
+
+#register_container form {
+  margin: auto;
+}
+
+.nameRInputs {
+  display: flex;
+  gap: 15px;
+}
+
+.regInputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
